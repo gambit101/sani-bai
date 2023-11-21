@@ -1,11 +1,25 @@
-import { FaHandPointRight, FaLeanpub } from "react-icons/fa";
+import { FaHandPointRight, FaLeanpub, FaLightbulb, FaQuoteLeft } from "react-icons/fa";
 import ScrollTrigger from "react-scroll-trigger";
 import CountUp from 'react-countup';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// import './styles.css';
+import { Parallax, Pagination, Navigation } from 'swiper/modules';
 
 const Home = () => {
 
     const [counterOn, setCounterOn] = useState(false);
+
+    useEffect(() => {
+        AOS.init({ duration: 500 })
+    }, [])
 
     return (
         <div className="md:mx-20">
@@ -44,62 +58,241 @@ const Home = () => {
             {/* About section */}
 
             <div className="hero-content lg:flex mt-20">
-                <div className='lg:w-1/2 relative'>
+                <div className='lg:w-1/2 relative'  data-aos='fade-down-left'>
                     <img src="https://cdn.pixabay.com/photo/2020/10/06/14/09/graduate-5632326_640.jpg" className="w-3/4 rounded-lg shadow-2xl h-[500px]" />
                     <img src="https://cdn.pixabay.com/photo/2017/08/07/22/28/man-2608588_640.jpg" className="w-1/2 absolute right-4 top-[300px] rounded-lg shadow-2xl border-4 border-white" />
                     <h1 className="absolute top-[410px] py-4 px-3 shadow-2xl bg-white text-lg animate-bounce font-bold text-pink-500 border-l-2 border-[#5F2DED]">30+ YEARS EXPERIENCE <br /> JUST ACHIVED</h1>
                 </div>
-                <div className='lg:w-1/2 pl-4'>
+                <div className='lg:w-1/2 pl-4'  data-aos='fade-down-right'>
                     <h3 className='text-3xl text-[#5F2DED] font-bold'>About us</h3>
                     <h1 className="text-5xl font-bold mt-7">We are qualified & of experience in this field</h1>
                     <p className="pl-2 mt-7 border-l-2 border-[#5F2DED] text-gray-500">25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC.</p>
                     <p className="mt-8 flex"><FaHandPointRight className="mt-1" />  <span className="ml-8">Lorem Ipsum is simply dummy</span></p>
-                    
+
                     <p className="mt-8 flex"><FaHandPointRight className="mt-1" />  <span className="ml-8">Lorem Ipsum is simply dummy</span></p>
-                    
+
                     <p className="mt-8 flex"><FaHandPointRight className="mt-1" />  <span className="ml-8">Lorem Ipsum is simply dummy</span></p>
-                    
+
                 </div>
             </div>
 
             {/* countup */}
 
             <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
-            <div className='py-14'>
+                <div className='py-14'>
 
-                <h1 className=" text-4xl font-bold text-center pt-5 mt-10">
-                Learn something new & Build Your Career From Anywhere In The World
-                </h1>
-                
+                    <h1 className=" text-4xl font-bold text-center pt-5 mt-10 text-[#5F2DED]">
+                        Learn something new & Build Your Career From Anywhere In The World
+                    </h1>
 
+
+                </div>
+                <div className='grid grid-cols-2 md:grid-cols-4 justify-evenly gap-10 py-10'>
+                    <div className="flex" data-aos="flip-up">
+                        <FaLeanpub className="text-6xl mr-3 text-pink-600" />
+                        <div className='' data-aos='flip-right'>
+                            {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>Total Acheivment</span>
+                        </div>
+                    </div>
+                    <div className="flex" data-aos="flip-down">
+                        <FaLightbulb className="text-6xl mr-3 text-pink-600" />
+                        <div className='' data-aos='flip-right'>
+                            {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={12} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>TOTAL STUDENTS</span>
+                        </div>
+                    </div>
+                    <div className="flex" data-aos="flip-up">
+                        <FaLeanpub className="text-6xl mr-3 text-pink-600" />
+                        <div className='' data-aos='flip-right'>
+                            {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>Total Acheivment</span>
+                        </div>
+                    </div>
+                    <div className="flex" data-aos="flip-up">
+                        <FaLeanpub className="text-6xl mr-3 text-pink-600" />
+                        <div className='' data-aos='flip-right'>
+                            {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>Total Acheivment</span>
+                        </div>
+                    </div>
+                </div>
+            </ScrollTrigger>
+
+
+            {/* popular subject */}
+
+
+            <div className="grid md:grid-cols-2">
+                <div className="mt-20" data-aos="zoom-in">
+                    <button className="text-[#5F2DED] font-semibold bg-gray-300 px-4 ml-10 py-1 rounded-xl">Popular subject</button>
+
+                    <div className=' pl-4'>
+                        <h1 className="text-5xl font-bold mt-7">Provide It & Technol
+                            Subject For You</h1>
+                        <p className="pl-2 mt-7 border-l-2 border-[#5F2DED] text-gray-500">25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC.</p>
+                        <p className="pl-2 mt-7 border-l-2 border-[#5F2DED] text-gray-500">25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ipsam animi obcaecati quos officiis praesentium ratione doloribus cupiditate eius consectetur.</p>
+
+                    </div>
+                    <button className="bg-pink-500 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded text-xl mt-10 ml-5 mb-5">Click me</button>
+
+                </div>
+
+                <div className="grid md:grid-cols-2 ml-14">
+                    {/* <div>
+                        <div className="w-[250px] h-[280px] bg-gray-300 p-5 rounded-xl">
+                            <FaLeanpub className="text-5xl mr-3 text-pink-600 mt-3" />
+                            <button className="text-2xl font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                            <p className="text-gray-600 mt-3">Construction is a general term the art and science to form</p>
+                            <button className="font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                        </div>
+                        <div className="w-[250px] h-[280px] bg-gray-300 p-5 rounded-xl mt-16">
+                            <FaLeanpub className="text-5xl mr-3 text-pink-600 mt-3" />
+                            <button className="text-2xl font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                            <p className="text-gray-600 mt-3">Construction is a general term the art and science to form</p>
+                            <button className="font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                        </div>
+                    </div> */}
+                    <div className="">
+                        <div className="w-[250px] h-[280px] bg-gray-300 p-5 rounded-xl hover:bg-[#5F2DED]" data-aos="zoom-in-left">
+                            <FaLeanpub className="text-5xl mr-3 text-pink-600 mt-3" />
+                            <button className="text-2xl font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                            <p className="text-gray-800 mt-3">Construction is a general term the art and science to form</p>
+                            <button className="font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                        </div>
+                        <div className="w-[250px] h-[280px] bg-gray-300 p-5 rounded-xl hover:bg-[#5F2DED] mt-5" data-aos="zoom-in-right">
+                            <FaLeanpub className="text-5xl mr-3 text-pink-600 mt-3" />
+                            <button className="text-2xl font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                            <p className="text-gray-800 mt-3">Construction is a general term the art and science to form</p>
+                            <button className="font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                        </div>
+                    </div>
+                    <div className="mt-14">
+                        <div className="w-[250px] h-[280px] bg-gray-300 p-5 hover:bg-[#5F2DED] rounded-xl" data-aos="zoom-in-left">
+                            <FaLeanpub className="text-5xl mr-3 text-pink-600 mt-3" />
+                            <button className="text-2xl font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                            <p className="text-gray-800 mt-3">Construction is a general term the art and science to form</p>
+                            <button className="font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                        </div>
+                        <div className="w-[250px] h-[280px] bg-gray-300 p-5 rounded-xl hover:bg-[#5F2DED] mt-5" data-aos="zoom-in-right">
+                            <FaLeanpub className="text-5xl mr-3 text-pink-600 mt-3" />
+                            <button className="text-2xl font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                            <p className="text-gray-800 mt-3">Construction is a general term the art and science to form</p>
+                            <button className="font-bold hover:text-pink-500 mt-3">Machine Learning</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className='grid grid-cols-2 md:grid-cols-4 justify-evenly gap-10 py-10'>
-                <div className="flex">
-                <FaLeanpub className="text-6xl mr-3 text-pink-600" />
-                <div className='' data-aos='flip-right'>
-                    {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>Total Acheivment</span>
+
+            {/* career */}
+
+            <div className="mt-20 flex">
+                <div>
+                    <button className="text-[#5F2DED] font-semibold bg-gray-300 px-4 ml-10 py-1 rounded-xl">Popular subject</button>
+                    <h1 className="text-5xl font-bold mt-7">Perfect Online <br /> Course Your Carrer</h1>
                 </div>
-                </div>
-                <div className="flex">
-                <FaLeanpub className="text-6xl mr-3 text-pink-600" />
-                <div className='' data-aos='flip-right'>
-                    {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={12} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>TOTAL STUDENTS</span>
-                </div>
-                </div>
-                <div className="flex">
-                <FaLeanpub className="text-6xl mr-3 text-pink-600" />
-                <div className='' data-aos='flip-right'>
-                    {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>Total Acheivment</span>
-                </div>
-                </div>
-                <div className="flex">
-                <FaLeanpub className="text-6xl mr-3 text-pink-600" />
-                <div className='' data-aos='flip-right'>
-                    {counterOn && <CountUp className='text-3xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-3xl font-bold'>K</span><br /><span>Total Acheivment</span>
-                </div>
+
+                <div className="mt-20 ml-7">
+                    <button className="text-[#5F2DED] font-semibold bg-gray-300 px-4 ml-10 py-1 rounded-xl">Popular subject</button>
+                    <button className="text-[#5F2DED] font-semibold bg-gray-300 px-4 ml-10 py-1 rounded-xl">Popular subject</button>
+                    <button className="text-[#5F2DED] font-semibold bg-gray-300 px-4 ml-10 py-1 rounded-xl">Popular subject</button>
+                    <button className="text-[#5F2DED] font-semibold bg-gray-300 px-4 ml-10 py-1 rounded-xl">Popular subject</button>
                 </div>
             </div>
-        </ScrollTrigger>
+
+            {/* swiper */}
+
+            <div className='w-2/3 mx-auto my-24' data-aos="zoom-out-down">
+                <Swiper
+                    style={{
+                        '--swiper-navigation-color': '#5F2DED',
+                        '--swiper-pagination-color': '#fff',
+                    }}
+                    speed={600}
+                    parallax={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Parallax, Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                    <div
+                        slot="container-start"
+                        className="parallax-bg"
+                        style={{
+                            'background-image':
+                                'url(https://swiperjs.com/demos/images/nature-1.jpg)',
+                        }}
+                        data-swiper-parallax="-23%"
+                    ></div>
+                    <SwiperSlide>
+
+                        <div>
+                            <div className="text flex px-10 gap-3" data-swiper-parallax="-100">
+                                <FaQuoteLeft className='text-9xl pb-20'></FaQuoteLeft>
+                                <p className=''>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                                </p>
+
+                            </div>
+                            <hr className='text-[#5F2DED] border-[#5F2DED] mt-5 w-3/4 mx-auto' />
+                            <div className='flex gap-5 items-center w-2/3 mx-auto'>
+                                <img className='h-28 w-28 rounded-full mt-5 border-4 border-[#5F2DED]' src="https://orga.wpengine.com/wp-content/uploads/2015/06/clients7.jpg" alt="" />
+                                <p className='text-lg font-bold text-[#5F2DED] '>Garry holmes</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div>
+                            <div className="text flex px-10 gap-3" data-swiper-parallax="-100">
+                                <FaQuoteLeft className='text-9xl pb-20'></FaQuoteLeft>
+                                <p className=''>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                                </p>
+
+                            </div>
+                            <hr className='text-[#5F2DED] border-[#5F2DED] mt-5 w-3/4 mx-auto' />
+                            <div className='flex gap-5 items-center w-2/3 mx-auto'>
+                                <img className='h-28 w-28 rounded-full mt-5 border-4 border-[#5F2DED]' src="https://orga.wpengine.com/wp-content/uploads/2015/06/clients7.jpg" alt="" />
+                                <p className='text-lg font-bold text-[#5F2DED] '>Garry holmes</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div>
+                            <div className="text flex px-10 gap-3" data-swiper-parallax="-100">
+                                <FaQuoteLeft className='text-9xl pb-20'></FaQuoteLeft>
+                                <p className=''>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                                    dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                                    laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                                    Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                                    Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                                    tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                                </p>
+
+                            </div>
+                            <hr className='text-[#5F2DED] border-[#5F2DED] mt-5 w-3/4 mx-auto' />
+                            <div className='flex gap-5 items-center w-2/3 mx-auto'>
+                                <img className='h-28 w-28 rounded-full mt-5 border-4 border-[#5F2DED]' src="https://orga.wpengine.com/wp-content/uploads/2015/06/clients7.jpg" alt="" />
+                                <p className='text-lg font-bold text-[#5F2DED] '>Garry holmes</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
         </div>
     );
 };
