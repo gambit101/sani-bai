@@ -6,6 +6,7 @@ import { useEffect } from "react";
 const About = () => {
     useEffect(() => {
         AOS.init({ duration: 500 })
+        window.scroll(0,0)
     }, [])
     return (
         <div className="mx-20">
