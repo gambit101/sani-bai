@@ -77,7 +77,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="zoom-out">
-                        <img className="w-full" src="https://plus.unsplash.com/premium_photo-1676422355165-d809008b8342?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Card Image" />
+                        <img className="w-full h-[256px]" src="https://plus.unsplash.com/premium_photo-1676422355165-d809008b8342?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" alt="Card Image" />
                         <div className="border-4 border-transparent absolute inset-0 transition duration-300 ease-in-out hover:border-pink-500"></div>
                         <div className="px-6 py-4 relative">
                             <p className="text-xs text-gray-500">Posted on June 18, 2015 /  2 /  ram</p>
