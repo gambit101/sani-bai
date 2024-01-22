@@ -22,57 +22,53 @@ import { EffectCoverflow, EffectCreative, Pagination, Navigation } from 'swiper/
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom';
 
 function App() {
   const [counterOn, setCounterOn] = useState(false);
 
   useEffect(() => {
-      AOS.init({ duration: 500 })
+    AOS.init({ duration: 500 })
   }, [])
 
   return (
 
     <>
-      {/* hero */}
-      {/* <div className="flex justify-center pt-8 pr-5 bg bg-black">
-        <div className="sm:w-full md:w-6/12 h-full flex flex-col justify items-center">
-          <nav className="w-full flex">
-            <ul className="flex w-full">
-              <li className="cursor-pointer px-2 hover:text-green-600 transition-all duration 150">Home</li>
-              <li className="cursor-pointer px-2 hover:text-green-600 transition-all duration 150">About</li>
-              <li className="cursor-pointer px-2 hover:text-green-600 transition-all duration 150">Services</li>
-              <li className="cursor-pointer px-2 hover:text-green-600 transition-all duration 150">Home</li>
-            </ul>
-            <a href="#" className="font-bold text-xl hover:text-green-600 transition-all duration 150">Logo</a>
-          </nav>
-          <h3 className="text-2xl italic text-green-400">Interior Design</h3>
-          <h1 className="text-6xl font-bold">Your space, Your style</h1>
-          <h3 className="text-2xl italic text-green-400">Art and Science</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quaerat provident nemo omnis earum placeat ducimus voluptas recusandae laboriosam delectus.</p>
-          <button className="relative overflow-hidden bg-gradient-to-r from-blue-500 to-violet-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl mt-7">
-            <span className="absolute inset-0 bg-white opacity-20 transform rotate-45 translate-x-3 -translate-y-2"></span>
-            Read More
-          </button>
-        </div>
-      </div> */}
+      {/* banner&navbar */}
 
 
-      <div
-        className="bg-cover bg-center relative text-white h-screen flex flex-col justify-center items-center"
-        style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1678559033839-aaf50cb4c843?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZnVybml0dXJlfGVufDB8fDB8fHww')" }}
-      >
-        <nav className="fixed top-0 left-0 w-full bg-transparent p-4">
-          {/* Your Navbar Content Goes Here */}
-          <ul className="flex justify-end">
-            <li className="text-lg mr-4">Home</li>
-            <li className="text-lg mr-4">About</li>
-            <li className="text-lg">Contact</li>
-          </ul>
-        </nav>
+      <div className='w-full h-[600px] bg-banner-bg bg-center'>
+        <div className='w-full h-full bg-black opacity-80'>
+          <div className="w-full h-20 lg:h-28 border-b-[1px] border-gray-500 text-black lg:text-white bg-white lg:bg-transparent">
+            <div className="max-w-screen-2xl h-full mx-auto px-4 flex items-center justify-between">
+              <h1 className="text-2xl uppercase font-bold">Logo</h1>
+              <ul className="md:flex items-center gap-8 uppercase text-sm font-semibold">
+                <li className="hover:text-blue-500 cursor-pointer hover:underline">Home</li>
+                <li className="hover:text-blue-500 cursor-pointer hover:underline">Pages</li>
+                <li className="hover:text-blue-500 cursor-pointer hover:underline">Services</li>
+                <li className="hover:text-blue-500 cursor-pointer hover:underline">Portfolio</li>
+                <li className="hover:text-blue-500 cursor-pointer hover:underline">Blog</li>
+                <li className="hover:text-blue-500 cursor-pointer hover:underline">Shop</li>
+              </ul>
 
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-4">Your Hero Title</h1>
-          <p className="text-lg">Your hero description goes here.</p>
+
+
+              <button className="w-48 h-14 bg-gradient-to-r from-blue-500 to-violet-600 text-white hover:text-black uppercase text-sm font-semibold rounded-md hover:bg-darkRed duration-300">
+                Login?
+              </button>
+
+              <div className="inline-flex lg:hidden">
+
+              </div>
+            </div>
+
+            <div className="h-96 max-w-screen-2xl mx-auto flex flex-col justify-center items-center">
+              <h1 className="text-2xl md:text-4xl uppercase font-bold">
+                Demo text
+              </h1>
+
+            </div>
+          </div>
         </div>
       </div>
 
@@ -168,7 +164,7 @@ function App() {
       {/* swiper */}
       <div className='mx-20 md:flex'>
 
-        <div className='md:w-6/12 mt-20'  data-aos="zoom-out">
+        <div className='md:w-6/12 mt-20' data-aos="zoom-out-down">
           <Swiper
             grabCursor={true}
             effect={'creative'}
@@ -191,7 +187,7 @@ function App() {
 
           </Swiper>
         </div>
-        <div className='md:w-6/12' data-aos="zoom-in">
+        <div className='md:w-6/12' data-aos="zoom-out-down">
           <div className='flex mt-10 gap-20 md:ml-20'>
             <h2 className='text-xl font-bold text-blue-950'>History</h2>
             <h2 className='text-xl font-bold text-blue-950'>Mission</h2>
@@ -227,7 +223,7 @@ function App() {
       </div>
 
       <div className='mx-20 md:flex justify-between gap-10 mt-20'>
-        <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="flip-right">
+        <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="zoom-out-down">
           <img className="w-full" src="https://plus.unsplash.com/premium_photo-1682130147350-c1f80c968967?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbWluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Card Image" />
           <div className="border-4 border-transparent absolute inset-0 transition duration-300 ease-in-out "></div>
           <div className="px-6 py-4 relative">
@@ -241,7 +237,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="flip-left">
+        <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="zoom-out-down">
           <img className="w-full" src="https://plus.unsplash.com/premium_photo-1682130147350-c1f80c968967?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbWluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Card Image" />
           <div className="border-4 border-transparent absolute inset-0 transition duration-300 ease-in-out "></div>
           <div className="px-6 py-4 relative">
@@ -255,7 +251,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="flip-right">
+        <div className="max-w-md overflow-hidden shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-200 relative" data-aos="zoom-out-down">
           <img className="w-full" src="https://plus.unsplash.com/premium_photo-1682130147350-c1f80c968967?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbWluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Card Image" />
           <div className="border-4 border-transparent absolute inset-0 transition duration-300 ease-in-out "></div>
           <div className="px-6 py-4 relative">
@@ -323,7 +319,7 @@ function App() {
         </div>
       </Swiper>
 
-      <div className='md:flex justify-between mx-20 my-20' data-aos="zoom-out-down">
+      <div className='md:flex justify-between mx-20 my-20' data-aos="flip-right">
         <div>
           <h1 className='font-bold text-2xl'>New york office</h1>
           <p className='mt-4'>6555-7788</p>
@@ -382,6 +378,10 @@ function App() {
           </div>
         </nav>
       </footer>
+
+      <div>
+        <li className="bg-blue-950 text-white text-center"><Link to='/about'>About</Link></li>
+      </div>
 
     </>
   )
