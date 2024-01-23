@@ -216,7 +216,7 @@ function App() {
       {/* our team */}
 
       <div className='mx-20'>
-        <h1 className='text-8xl font-bold text-blue-950 mt-20'>
+        <h1 className='text-7xl font-bold text-blue-950 mt-20'>
           Meet the Masters of   <br /> Interior Design</h1>
         <hr className='mt-5' />
         <h3 className='text-3xl font-semibold text-blue-950 mt-10'>One Team, Infinite Possibilities</h3>

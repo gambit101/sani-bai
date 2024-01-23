@@ -29,28 +29,28 @@ const Services = () => {
 
             <div className="flex mx-20 justify-around mt-20">
                 <div className="w-36" data-aos="zoom-out-down">
-                    <FaPeopleArrows className="text-6xl mx-auto text-amber-700" />
+                    <FaPeopleArrows className="text-6xl mx-auto text-lime-800" />
                     <p className="text-center mt-3 italic">Meet and Greet</p>
                 </div>
                 <div>
                     <IoMdArrowForward className="text-4xl mt-5" />
                 </div>
                 <div className="w-36" data-aos="zoom-out-down">
-                    <MdOutlineDesignServices className="text-6xl mx-auto text-amber-700" />
+                    <MdOutlineDesignServices className="text-6xl mx-auto text-orange-800" />
                     <p className="text-center mt-3 italic">Design Development</p>
                 </div>
                 <div>
                     <IoMdArrowForward className="text-4xl mt-5" />
                 </div>
                 <div className="w-36" data-aos="zoom-out-down">
-                    <MdOutlineBorderColor className="text-6xl mx-auto text-amber-700" />
+                    <MdOutlineBorderColor className="text-6xl mx-auto text-purple-500" />
                     <p className="text-center mt-3 italic">Place Order</p>
                 </div>
                 <div>
                     <IoMdArrowForward className="text-4xl mt-5" />
                 </div>
                 <div className="w-36" data-aos="zoom-out-down">
-                    <RiInstallFill className="text-6xl mx-auto text-amber-700" />
+                    <RiInstallFill className="text-6xl mx-auto text-yellow-300" />
                     <p className="text-center mt-3 italic">Installation Process</p>
                 </div>
                 <div>
@@ -152,7 +152,7 @@ const Services = () => {
             {/* the team */}
 
             <div className="mt-20 bg-blue-500 pt-16">
-                <h1 className='text-5xl font-bold text-white mt-20 text-center  pb-10 mx-20'>The Team Behind Minimal</h1>
+                <h1 className='text-5xl font-bold text-white mt-20 text-center  pb-10 mx-20' >The Team Behind Minimal</h1>
                 <p className="text-sm text-white pb-6 text-center">Our diverse team of architects, engineers, and business managers <br /> is here to make your home the best it can be.</p>
                 <img className="px-40 pb-20 pt-5" src="https://www.minimallimited.com/wp-content/uploads/Team-desktop-2-1536x1080.webp" alt="" />
 
