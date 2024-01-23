@@ -31,7 +31,7 @@ const AboutPage = () => {
             </div>
 
             <div className='flex'>
-                <div className='w-1/2 px-10 relative top-10 '>
+                <div className='w-1/2 px-16 relative top-10 '>
                     <Swiper
                         spaceBetween={30}
                         centeredSlides={true}
