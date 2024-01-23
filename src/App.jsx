@@ -43,12 +43,12 @@ function App() {
             <div className="max-w-screen-2xl h-full mx-auto px-4 flex items-center justify-between">
               <h1 className="text-2xl uppercase font-bold">Logo</h1>
               <ul className="md:flex items-center gap-8 uppercase text-sm font-semibold">
-                <li className="hover:text-blue-500 cursor-pointer hover:underline">Home</li>
-                <li className="hover:text-blue-500 cursor-pointer hover:underline">Pages</li>
-                <li className="hover:text-blue-500 cursor-pointer hover:underline">Services</li>
-                <li className="hover:text-blue-500 cursor-pointer hover:underline">Portfolio</li>
-                <li className="hover:text-blue-500 cursor-pointer hover:underline">Blog</li>
-                <li className="hover:text-blue-500 cursor-pointer hover:underline">Shop</li>
+                <li className="hover:text-blue-500 cursor-pointer">Home</li>
+                <li className="hover:text-blue-500 cursor-pointer">Pages</li>
+                <li className="hover:text-blue-500 cursor-pointer">Services</li>
+                <li className="hover:text-blue-500 cursor-pointer">Portfolio</li>
+                <li className="hover:text-blue-500 cursor-pointer">Blog</li>
+                <li className="hover:text-blue-500 cursor-pointer">Shop</li>
               </ul>
 
 
@@ -381,6 +381,12 @@ function App() {
 
       <div>
         <li className="bg-blue-950 text-white text-center"><Link to='/about'>About</Link></li>
+      </div>
+      <div>
+        <li className="bg-blue-950 text-white text-center"><Link to='/aboutPage'>About Page</Link></li>
+      </div>
+      <div>
+        <li className="bg-blue-950 text-white text-center"><Link to='/services'>Services</Link></li>
       </div>
 
     </>
