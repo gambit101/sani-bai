@@ -35,7 +35,7 @@ const Services = () => {
                 <div>
                     <IoMdArrowForward className="text-4xl mt-5" />
                 </div>
-                <div className="w-36"data-aos="zoom-out-down">
+                <div className="w-36" data-aos="zoom-out-down">
                     <MdOutlineDesignServices className="text-6xl mx-auto text-amber-700" />
                     <p className="text-center mt-3 italic">Design Development</p>
                 </div>
@@ -67,7 +67,7 @@ const Services = () => {
 
             <div className="mx-20">
                 <div className="flex justify-items-start gap-10 mt-10">
-                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Meet-and-Greet.svg" alt=""  data-aos="zoom-out-down"/>
+                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Meet-and-Greet.svg" alt="" data-aos="zoom-out-down" />
                     <div className="mt-20" data-aos="zoom-out-down">
                         <h1 className="text-3xl font-semibold">
                             Meet and Greet
@@ -83,7 +83,7 @@ const Services = () => {
                     </div>
                 </div>
                 <div className="flex justify-items-start gap-10 mt-10">
-                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Design-Development.svg" alt=""data-aos="zoom-out-down" />
+                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Design-Development.svg" alt="" data-aos="zoom-out-down" />
                     <div className="mt-20" data-aos="zoom-out-down">
                         <h1 className="text-3xl font-semibold">
                             Design Development
@@ -99,10 +99,10 @@ const Services = () => {
                     </div>
                 </div>
                 <div className="flex justify-items-start gap-10 mt-10">
-                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/place-the-order-at-minimal.svg" alt="" data-aos="zoom-out-down"/>
+                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/place-the-order-at-minimal.svg" alt="" data-aos="zoom-out-down" />
                     <div className="mt-20" data-aos="zoom-out-down">
                         <h1 className="text-3xl font-semibold">
-                            Start the Order with a 50% payment
+                            Place Order
                         </h1>
                         <div className="pl-10 mt-5 border-l-4 border-dashed border-gray-500 text-lg">
                             <p className=" font-semibold text-gray-500">Start the Order with a 50% payment</p>
@@ -117,10 +117,10 @@ const Services = () => {
                     </div>
                 </div>
                 <div className="flex justify-items-start gap-10 mt-10">
-                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Installation-Process.svg" alt="" data-aos="zoom-out-down"/>
+                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Installation-Process.svg" alt="" data-aos="zoom-out-down" />
                     <div className="mt-20" data-aos="zoom-out-down">
                         <h1 className="text-3xl font-semibold">
-                            Pay 95% at the execution milestone
+                            Installation Process
                         </h1>
                         <div className="pl-10 mt-5 border-l-4 border-dashed border-gray-500 text-lg">
                             <p className=" font-semibold text-gray-500">Pay 95% at the execution milestone </p>
@@ -135,8 +135,8 @@ const Services = () => {
                     </div>
                 </div>
                 <div className="flex justify-items-start gap-10 mt-10">
-                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Moving-In.svg" alt="" data-aos="zoom-out-down"/>
-                    <div className="mt-20" data-aos="zoom-out-down"> 
+                    <img className="w-1/2 h-96" src="https://www.minimallimited.com/wp-content/uploads/2022/10/Minimal-Moving-In.svg" alt="" data-aos="zoom-out-down" />
+                    <div className="mt-20" data-aos="zoom-out-down">
                         <h1 className="text-3xl font-semibold">
                             Moving in
                         </h1>
@@ -147,6 +147,15 @@ const Services = () => {
 
                     </div>
                 </div>
+            </div>
+
+            {/* the team */}
+
+            <div className="mt-20 bg-blue-500 pt-16">
+                <h1 className='text-5xl font-bold text-white mt-20 text-center  pb-10 mx-20'>The Team Behind Minimal</h1>
+                <p className="text-sm text-white pb-6 text-center">Our diverse team of architects, engineers, and business managers <br /> is here to make your home the best it can be.</p>
+                <img className="px-40 pb-20 pt-5" src="https://www.minimallimited.com/wp-content/uploads/Team-desktop-2-1536x1080.webp" alt="" />
+
             </div>
         </div>
     );

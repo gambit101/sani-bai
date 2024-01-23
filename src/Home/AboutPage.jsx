@@ -44,12 +44,12 @@ const AboutPage = () => {
                         modules={[Autoplay, Pagination, Navigation]}
                         className="mySwiper"
                     >
-                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1682687220640-9d3b11ca30e5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1682685797660-3d847763208e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='h-72 w-full' src="https://i.ibb.co/pQzXD7g/Screenshot-2023-06-27-110048.png" alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='h-72 w-full' src="https://i.ibb.co/2PCRJR1/Screenshot-2023-06-27-110112.png" alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='h-72 w-full' src="https://i.ibb.co/C6FDCLS/Screenshot-2023-06-27-110131.png" alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='h-72 w-full' src="https://i.ibb.co/Fs4t6tL/Screenshot-2023-06-27-110150.png" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?q=80&w=1513&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='h-72 w-full' src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
                     </Swiper>
                 </div>
 
@@ -65,12 +65,12 @@ const AboutPage = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper w-1/2"
                 >
-                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1682687220640-9d3b11ca30e5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1682685797660-3d847763208e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-96 w-full' src="https://i.ibb.co/pQzXD7g/Screenshot-2023-06-27-110048.png" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-96 w-full' src="https://i.ibb.co/2PCRJR1/Screenshot-2023-06-27-110112.png" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-96 w-full' src="https://i.ibb.co/C6FDCLS/Screenshot-2023-06-27-110131.png" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='h-96 w-full' src="https://i.ibb.co/Fs4t6tL/Screenshot-2023-06-27-110150.png" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1618221469555-7f3ad97540d6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?q=80&w=1513&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='h-96 w-full' src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
                 </Swiper>
 
             </div>

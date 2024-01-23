@@ -42,7 +42,7 @@ function App() {
           <div className="w-full h-20 lg:h-28 border-b-[1px] border-gray-500 text-black lg:text-white bg-white lg:bg-transparent">
             <div className="max-w-screen-2xl h-full mx-auto px-4 flex items-center justify-between">
               <h1 className="text-2xl uppercase font-bold">Logo</h1>
-              <ul className="md:flex items-center gap-8 uppercase text-sm font-semibold">
+              <ul className="md:flex items-center gap-8 uppercase font-semibold">
                 <li className="hover:text-blue-500 cursor-pointer">Home</li>
                 <li className="hover:text-blue-500 cursor-pointer">Pages</li>
                 <li className="hover:text-blue-500 cursor-pointer">Services</li>
@@ -133,7 +133,7 @@ function App() {
 
         <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
 
-          <div className='grid grid-cols-2 md:grid-cols-3 justify-evenly gap-20 py-10 ml-20'>
+          <div className='grid grid-cols-1 md:grid-cols-3 justify-evenly gap-20 py-10 ml-20'>
 
 
             <div className='' data-aos="zoom-out-down">
@@ -157,7 +157,7 @@ function App() {
       </div>
 
       <div className='mx-20'>
-        <h1 className='text-8xl font-bold text-blue-950 mt-20'>About Our Design  <br /> Philosophy</h1>
+        <h1 className='text-7xl font-bold text-blue-950 mt-20'>About Our Design  <br /> Philosophy</h1>
         <hr className='mt-5' />
         <h3 className='text-3xl font-semibold text-blue-950 mt-10'>Your Vision, Our Design Expertise</h3>
       </div>
@@ -387,6 +387,9 @@ function App() {
       </div>
       <div>
         <li className="bg-blue-950 text-white text-center"><Link to='/services'>Services</Link></li>
+      </div>
+      <div>
+        <li className="bg-blue-950 text-white text-center"><Link to='/portfolio'>Portfolio</Link></li>
       </div>
 
     </>
