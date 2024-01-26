@@ -17,7 +17,7 @@ import 'swiper/css/navigation';
 // import './styles.css';
 
 // import required modules
-import { EffectCoverflow, EffectCreative, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, EffectCreative, Pagination, Navigation, Autoplay } from 'swiper/modules';
 // import Swiper from 'swiper';
 
 import AOS from 'aos'
@@ -37,7 +37,7 @@ function App() {
       {/* banner&navbar */}
 
 
-      <div className='w-full h-[600px] bg-banner-bg bg-center'>
+      <div className='w-full h-[650px] bg-cover'>
         <div className='w-full h-full bg-black opacity-80'>
           <div className="w-full h-20 lg:h-28 border-b-[1px] border-gray-500 text-black lg:text-white bg-white lg:bg-transparent">
             <div className="max-w-screen-2xl h-full mx-auto px-4 flex items-center justify-between">
@@ -62,21 +62,61 @@ function App() {
               </div>
             </div>
 
-            <div className="h-96 max-w-screen-2xl mx-auto flex flex-col justify-center items-center">
-              <h1 className="text-2xl md:text-4xl uppercase font-bold">
-                Demo text
-              </h1>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
 
-            </div>
+              // navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper h-[600px]"
+            >
+              <SwiperSlide><div className="card w-full h-full shadow-xl image-full">
+                <figure><img className='w-full bg-cover' src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoes" /></figure>
+                <div className="card-body text-center w-full">
+                  
+                  <p className='text-7xl mt-20 font-bold'>If a dog chews shoes whose shoes does he choose?</p>
+                  
+                </div>
+              </div></SwiperSlide>
+              <SwiperSlide><div className="card w-full h-full shadow-xl image-full">
+                <figure><img className='w-full bg-cover' src="https://images.unsplash.com/photo-1618219740975-d40978bb7378?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoes" /></figure>
+                <div className="card-body text-center w-full">
+                  
+                  <p className='text-7xl mt-20 font-bold'>If a dog chews shoes whose shoes does he choose?</p>
+                  
+                </div>
+              </div></SwiperSlide>
+              <SwiperSlide><div className="card w-full h-full shadow-xl image-full">
+                <figure><img className='w-full bg-cover' src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoes" /></figure>
+                <div className="card-body text-center w-full">
+                  
+                  <p className='text-7xl mt-20 font-bold'>If a dog chews shoes whose shoes does he choose?</p>
+                  
+                </div>
+              </div></SwiperSlide>
+              <SwiperSlide><div className="card w-full h-full shadow-xl image-full">
+                <figure><img className='w-full bg-cover' src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shoes" /></figure>
+                <div className="card-body text-center w-full">
+                  
+                  <p className='text-7xl mt-20 font-bold'>If a dog chews shoes whose shoes does he choose?</p>
+                  
+                </div>
+              </div></SwiperSlide>
+             
+            </Swiper>
           </div>
         </div>
       </div>
 
       {/* countup */}
 
-      <div className='mx-20'>
+      <div className='md:mx-40'>
         <h1 className='text-8xl font-bold text-blue-950 mt-20'>Elevate Your <br /> Interiors</h1>
-        <div className='flex justify-between'>
+        <div className='md:flex justify-between'>
           <h3 className='text-2xl font-semibold text-blue-950 mt-10'>Designing Interiors That Leave a Lasting Impression</h3>
           <div className='flex'>
             <h3 className='text-2xl font-semibold text-blue-950 mt-10'>All services </h3>
@@ -133,21 +173,21 @@ function App() {
 
         <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 justify-evenly gap-20 py-10 ml-20'>
+          <div className='grid grid-cols-1 md:grid-cols-3 md:mx-56 py-10'>
 
 
-            <div className='' data-aos="zoom-out-down">
+            <div className='w-full' data-aos="zoom-out-down">
               {counterOn && <CountUp className='text-8xl font-bold text-center' start={0} end={13} duration={2} delay={0}></CountUp>}  <span className='text-8xl font-bold'>K</span><br /><span className='text-2xl mt-3'>Clients Around the World</span>
             </div>
 
 
 
-            <div className='' data-aos="zoom-out-down">
+            <div className='w-full ml-24' data-aos="zoom-out-down">
               {counterOn && <CountUp className='text-8xl font-bold text-center' start={0} end={74} duration={2} delay={0}></CountUp>}  <span className='text-8xl font-bold'>K</span><br /><span className='text-2xl mt-3'>Square Feet</span>
             </div>
 
 
-            <div className='' data-aos="zoom-out-down">
+            <div className='w-full ml-32' data-aos="zoom-out-down">
               {counterOn && <CountUp className='text-8xl font-bold text-center' start={0} end={30} duration={2} delay={0}></CountUp>}  <span className='text-8xl font-bold'>K</span><br /><span className='text-2xl mt-3'>Total Acheivment</span>
             </div>
 
@@ -162,7 +202,7 @@ function App() {
         <h3 className='text-3xl font-semibold text-blue-950 mt-10'>Your Vision, Our Design Expertise</h3>
       </div>
       {/* swiper */}
-      <div className='mx-20 md:flex'>
+      <div className='mx-20 md:flex gap-10'>
 
         <div className='md:w-6/12 mt-20' data-aos="zoom-out-down">
           <Swiper
@@ -180,10 +220,10 @@ function App() {
             modules={[EffectCreative]}
             className="mySwiper"
           >
-            <SwiperSlide><img src="https://images.unsplash.com/photo-1682687221213-56e250b36fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
-            <SwiperSlide><img src="https://images.unsplash.com/photo-1705599773334-b73b8f707101?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+            <SwiperSlide><img className='w-full' src="https://images.unsplash.com/photo-1682687221213-56e250b36fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8" alt="" /></SwiperSlide>
+            <SwiperSlide><img className='w-full' src="https://images.unsplash.com/photo-1683009427037-c5afc2b8134d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8" alt="" /></SwiperSlide>
+            <SwiperSlide><img className='w-full' src="https://images.unsplash.com/photo-1682695794816-7b9da18ed470?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
+            <SwiperSlide><img className='w-full' src="https://images.unsplash.com/photo-1705599773334-b73b8f707101?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="" /></SwiperSlide>
 
           </Swiper>
         </div>
@@ -292,19 +332,19 @@ function App() {
         className="swiper_container mt-36"
       >
         <SwiperSlide>
-          <img src='https://images.unsplash.com/photo-1682687221213-56e250b36fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8' alt="slide_image" />
+          <img className='w-full' src='https://images.unsplash.com/photo-1682687221213-56e250b36fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8' alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src='https://images.unsplash.com/photo-1682687220866-c856f566f1bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8' alt="slide_image" />
+          <img className='w-full' src='https://images.unsplash.com/photo-1682687220866-c856f566f1bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8' alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src='https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D' alt="slide_image" />
+          <img className='w-full' src='https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D' alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src='https://images.unsplash.com/photo-1682685797769-481b48222adf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D' alt="slide_image" />
+          <img className='w-full' src='https://images.unsplash.com/photo-1682685797769-481b48222adf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D' alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src='https://plus.unsplash.com/premium_photo-1703385177412-2f4930c9fe2a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D' alt="slide_image" />
+          <img className='w-full' src='https://plus.unsplash.com/premium_photo-1703385177412-2f4930c9fe2a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D' alt="slide_image" />
         </SwiperSlide>
 
 
@@ -390,6 +430,12 @@ function App() {
       </div>
       <div>
         <li className="bg-blue-950 text-white text-center"><Link to='/portfolio'>Portfolio</Link></li>
+      </div>
+      <div>
+        <li className="bg-blue-950 text-white text-center"><Link to='/signin'>signin</Link></li>
+      </div>
+      <div>
+        <li className="bg-blue-950 text-white text-center"><Link to='/popUp'>popUp</Link></li>
       </div>
 
     </>

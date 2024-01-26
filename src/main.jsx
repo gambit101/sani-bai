@@ -11,6 +11,8 @@ import App from './App';
 import AboutPage from './Home/AboutPage';
 import Services from './Home/Services';
 import Portfolio from './Home/Portfolio';
+import SignIn from './Home/SignIn';
+import PopUp from './Home/PopUp';
 // import About from './Home/About';
 
 const router = createBrowserRouter([
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
   {
     path: 'portfolio',
     element: <Portfolio></Portfolio>
+  },
+  {
+    path: 'signin',
+    element: <SignIn></SignIn>
+  },
+  {
+    path: 'popUp',
+    element: <PopUp></PopUp>
   }
 ]);
 
